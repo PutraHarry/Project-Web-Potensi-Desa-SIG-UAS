@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 #Guest
-//Route::get('/','GuestController@guest')->name('landing');
-//Route::get('/guest/sekolah','GuestController@guestsekolah');
-//Route::get('/guest/pasar','GuestController@guestpasar');
-//Route::get('/guest/tempat-ibadah','GuestController@guesttempatibadah');
-//Route::get('/guest/tempat-belanja','GuestController@guesttempatbelanja');
+Route::get('/','GuestController@guest')->name('landing');
+Route::get('/guest/sekolah','GuestController@guestsekolah');
+Route::get('/guest/pasar','GuestController@guestpasar');
+Route::get('/guest/tempat-ibadah','GuestController@guesttempatibadah');
+Route::get('/guest/tempat-belanja','GuestController@guesttempatbelanja');
 
 //Route::get('/login','GuestController@loginuser');
-Route::get('/','AdminController@dashboard')->name('dashboard');
+Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
 
 
 #Sekolah

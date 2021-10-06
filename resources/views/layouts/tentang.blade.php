@@ -60,7 +60,7 @@
           <img src="/adminlte/dist/img/photo4.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{auth()->guard()->user()->nama}}</a>
+          <a href="#" class="d-block">Hai User!</a>
         </div>
       </div>
 
