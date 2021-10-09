@@ -21,6 +21,7 @@ class PasarController extends Controller
         ];
         $tempat_pasar = Pasar::orderby('id', 'desc')->get();
         return view("admin.pasar.alldata", compact('tempat_pasar'), $data);
+        return response()->json($pasar);
     }
 
     public function createdata()
@@ -53,6 +54,7 @@ class PasarController extends Controller
 
         $pasar->save();
         return redirect('/pasar')->with('statusInput', 'Input Success');
+        return response()->json($pasar, 201);
     }
 
     public function editdata($id)
@@ -86,12 +88,14 @@ class PasarController extends Controller
 
         $pasar->update();
         return redirect('/pasar')->with('statusInput', 'update Success');
+        return response()->json($pasar, 200);
     }
     
     public function delete($id){
         $pasar = Pasar::find($id);
         $pasar->delete();
         return redirect('/pasar')->with('statusInput', 'delete Success');
+        return response()->json(null, 204);
     }
     
 }
